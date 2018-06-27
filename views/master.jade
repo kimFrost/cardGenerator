@@ -1,0 +1,85 @@
+doctype transitional
+html(ng-app="POTLModule")
+    head
+        meta(http-equiv="Content-Type", content="text/html; charset=UTF-8")
+        title
+            | POTL
+        script(src="main.js")
+        <link rel="stylesheet" type="text/css" href="css/card.css">
+
+        block head
+
+            
+    body
+
+        div
+            div.line
+            div.line
+            div.line
+
+        - for (var i=0; i < 16; i++)
+                div.card
+                    div.card__inner
+                        div.card__title Slum
+                        div.card__image
+                            img(src="slum.jpg")
+                        div.card__desc
+                            p Cost 1 x 
+                                img(src="cog.svg", height="15")
+                            p 
+                                | Pick 1 x 
+                                img(src="helmet.svg", height="15")
+                                | on placing this card
+                            p You may allocate one labour point to search the deck for one slum card and place in your hand
+            
+         - for (var i=0; i < 8; i++)
+            div.card
+                div.card__inner
+                    div.card__title.font_small Manor
+                    div.card__image
+                        img(src="http://placehold.it/200x100")
+                    div.card__desc
+
+        - for (var i=0; i < 4; i++)
+            div.card
+                div.card__inner
+                    div.card__title.font_medium Concreate factory
+                    div.card__image
+                        img(src="http://placehold.it/200x100")
+                    div.card__desc
+                        p cost 2
+                            img(src="cog.svg", width="15")
+                        p Allocate up to 2 labour points and get 1 production per allocated point
+                        p On placing this card, you may place 1 slum card  from your hand for free
+
+        - for (var i=0; i < 4; i++)
+            div.card
+                div.card__inner
+                    div.card__title.font_small Sewage treatment plant
+                    div.card__image
+                        img(src="http://placehold.it/200x100")
+                    div.card__desc
+
+        - for (var i=0; i < 4; i++)
+            div.card
+                div.card__inner
+                    div.card__title.font_small 
+                    div.card__image
+                        img(src="http://placehold.it/200x100")
+                    div.card__desc
+                        p 
+                        p Draw 1 card from the top of the deck
+
+        - for (var i=0; i < 4; i++)
+            div.card
+                div.card__inner
+                    div.card__title.font_small Garbage dump
+                    div.card__image
+                        img(src="http://placehold.it/200x100")
+                    div.card__desc
+                        p 
+                            span Place: 
+                            span You may place a trash card a top this card
+                        p 
+                            span Remove:
+                            span return any stored trash card to the garbage dumps owner

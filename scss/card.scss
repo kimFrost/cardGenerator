@@ -1,0 +1,133 @@
+﻿
+
+@import "fontawesome-free-5.0.13/web-fonts-with-css/scss/fontawesome.scss";
+@import "fontawesome-free-5.0.13/web-fonts-with-css/scss/fa-regular.scss";
+
+
+
+@font-face {
+    font-family: Copperplate Gothic Bold;
+    src: url('/CopperplateGothicBold.otf') format("opentype");
+}
+
+html {
+   height: 100%;
+}
+
+body {
+   min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 100%;
+}
+
+.line {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    border-right: 1px solid black;
+    &:nth-child(1) {
+        left: 25%;
+    }
+    &:nth-child(2) {
+        left: 50%;
+    }
+    &:nth-child(3) {
+        left: 75%;
+    }
+}
+
+.card {
+    width: 25%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 25%;
+    font-family: 'Copperplate Gothic Bold';
+
+    &:nth-child(4n) {
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 400%;
+            border-bottom: 1px solid black;
+        }
+    }
+}
+
+.card__inner {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.card__title {
+    font-size: 14px;
+    text-align: center;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card__image {
+    height: 35%;
+    overflow: hidden;
+    background: grey;
+    img {
+        display: block;
+        width: 100%;
+    }
+}
+
+.card__desc {
+    padding: 5%;
+    height: 40%;
+    font-size: 8px;
+    text-align: justify;
+    font-style: italic;
+
+    p {
+        margin: 0 0 10px 0;
+    }
+}
+
+
+
+.font_small {
+    font-size: 8px;
+}
+
+.font_medium {
+    font-size: 10px;
+}
+
+.font_large {
+    font-size: 14px;
+}
+
+
+
+.icon_labour {
+    width: 20px;
+    height: 20px;
+    background-image: url('helmet.svg');
+    background-size: contain;
+    background-position: 50% 50%;
+}
